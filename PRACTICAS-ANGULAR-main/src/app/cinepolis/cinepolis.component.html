@@ -1,0 +1,42 @@
+<div class="contenedor">
+  <mat-card class="example-card">
+    <div class="row">
+      <mat-form-field appearance="outline" class="custom-form-field">
+        <mat-label>Nombre Cliente</mat-label>
+        <input matInput placeholder="Ingresa el nombre del comprador" [(ngModel)]="nombre">
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="custom-form-field">
+        <mat-label>No.Compradores</mat-label>
+        <input  matInput placeholder="Ingresa el número de compradores" [(ngModel)]="cantidadCompradores">
+      </mat-form-field>
+      <h3>¿Cuenta con Tarjeta Cineco?</h3>
+      <mat-radio-group aria-label="Select an option" [(ngModel)]="tieneTarjetaCineco" class="custom-radio-group">
+        <mat-radio-button *ngFor="let opcion of opciones" name="opciones" [value]="opcion" class="custom-radio-button">
+          {{ opcion }}
+        </mat-radio-button>
+      </mat-radio-group>
+      <mat-form-field appearance="outline" class="custom-form-field">
+        <mat-label>Cantidad de Boletos</mat-label>
+        <input matInput placeholder="Ingresa la cantidad de boletos a comprar" [(ngModel)]="cantidadBoletos">
+      </mat-form-field>
+    </div>
+    <button mat-raised-button color="primary" (click)="realizarCompra()">Realizar compra</button>
+    <button mat-raised-button color="warn" (click)="limpiar()">Cancelar compra</button>
+    <div class="row">
+      <mat-card class="example-card">
+        <mat-card-content>
+          <mat-card-title>Detalles de la compra</mat-card-title>
+          <mat-card-subtitle>Nombre del Cliente: {{ nombreCliente }}</mat-card-subtitle>
+          <mat-card-content>
+            <p>Cantidad de boletos a comprar: {{ cantidadBoletosOriginales }}</p>
+            <p>Valor total a pagar: {{ totalPagar }}</p>
+          </mat-card-content>
+        </mat-card-content>
+      </mat-card>
+      <br>
+      <br>
+    </div>
+  </mat-card>
+</div>
+
+<br>

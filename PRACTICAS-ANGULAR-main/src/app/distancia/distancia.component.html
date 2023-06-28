@@ -1,0 +1,35 @@
+<div class="container">
+    <mat-card class="example-card">
+    <div class="mat-form-field-group">
+      <mat-form-field appearance="fill">
+        <mat-label>Coordenada X1 del Punto 1:</mat-label>
+        <input matInput type="number" [(ngModel)]="x1" placeholder="X1">
+      </mat-form-field>
+      <br>
+      <mat-form-field appearance="fill">
+        <mat-label>Coordenada Y1 del punto 1:</mat-label>
+        <input matInput type="number" [(ngModel)]="y1" placeholder="Y1">
+      </mat-form-field>
+      <br>
+      <mat-form-field appearance="fill">
+        <mat-label>Coordenada X2 del Punto 2::</mat-label>
+        <input matInput type="number" [(ngModel)]="x2" placeholder="infresa">
+      </mat-form-field>
+      <br>
+      <mat-form-field appearance="fill">
+        <mat-label>Coordenada Y1 del Punto 1:</mat-label>
+        <input matInput type="number" [(ngModel)]="y2" placeholder="ingresa la coordenada ">
+      </mat-form-field>
+    </div>
+    <br>
+    <button mat-raised-button color="primary" (click)="calcularDistancia()">Calcular Distancia</button>
+    <button mat-raised-button color="warn" (click)="limpiar()">Limpiar formulario </button>
+    <hr class="mat-divider">
+    <h2 *ngIf="res != 0" class="mat-headline">Resultado: {{res}}</h2>
+
+   </mat-card> 
+  </div>
+  <br>
+  
+  
+   
