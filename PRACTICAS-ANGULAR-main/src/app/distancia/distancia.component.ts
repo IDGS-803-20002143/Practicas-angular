@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   templateUrl: './distancia.component.html',
   styleUrls: ['./distancia.component.css']
 })
-export class DistanciaComponent {
+export class distanciaComponent {
   x1!: number;
   x2!: number;
   y1!: number;

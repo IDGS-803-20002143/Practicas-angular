@@ -19,7 +19,7 @@ export class ResistenciasComponent {
   banda4Select = '';
 
   colores = [
-    { value: 'blanco', name: 'Negro' },
+    { value: 'black', name: 'Negro' },
     { value: 'brown', name: 'Marrón' },
     { value: 'red', name: 'Rojo' },
     { value: 'orange', name: 'Naranja' },
